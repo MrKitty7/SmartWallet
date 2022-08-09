@@ -27,7 +27,7 @@ def edit_balance():
     connection = sqlite3.connect("database.db")
     cursor = connection.cursor()
     print('---------------')
-
+    
     current_bal_hrk = cursor.execute('SELECT hrk FROM balance').fetchone()[0]
     current_bal_eur = cursor.execute('SELECT eur FROM balance').fetchone()[0]
     current_bal_usd = cursor.execute('SELECT usd FROM balance').fetchone()[0]
